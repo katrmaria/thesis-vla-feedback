@@ -1,0 +1,20 @@
+torch==2.2.0
+torchvision==0.17.0
+transformers==4.43.0
+accelerate==0.30.1
+peft==0.11.1
+timm==0.9.10
+pillow==10.3.0
+einops==0.8.0
+draccus==0.8.0
+tqdm==4.66.4
+matplotlib==3.8.4
+seaborn==0.13.2
+scipy==1.13.0
+scikit-learn==1.4.2
+wandb==0.17.0
+tensorflow==2.15.0
+tensorflow-datasets==4.9.4
+dlimp @ git+https://github.com/kvablack/dlimp
+mujoco==2.3.7
+robosuite==1.4.1
