@@ -64,6 +64,16 @@ Under LIBERO-PRO language perturbation, the ensemble raises the average
 from 65.7 to 70.0. Under swap and task perturbations, both baseline and
 ensemble collapse because the base model follows the memorised trajectory.
 
+## Example
+
+Task, "pick up the bowl in the top drawer of the wooden cabinet" (LIBERO-Spatial).
+The baseline reaches the bowl but fails to close the gripper. The ensemble
+completes the grasp and finishes the task.
+
+| OpenVLA baseline, fails to grasp | Ensemble, completes the grasp |
+|:---:|:---:|
+| ![Baseline fail](figures/baseline_fail.gif) | ![Ensemble success](figures/ensemble_success.gif) |
+
 ## Repository layout
 
 ```
