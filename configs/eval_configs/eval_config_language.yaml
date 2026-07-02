@@ -1,0 +1,23 @@
+bddl_files_path: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero/libero/bddl_files/"
+script_path: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/notebooks/generate_init_states.py"
+init_file_dir: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero/libero/init_files/"
+
+use_environment: false
+use_swap: false
+use_object: false
+use_language: true
+use_task: false
+
+ood_task_configs:
+  environment: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero_ood/ood_environment.yaml"
+  swap: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero_ood/ood_spatial_relation.yaml"
+  object: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero_ood/ood_object.yaml"
+  language: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero_ood/ood_language.yaml"
+  task: "/cephyr/users/mariakat/Alvis/openvla/openvla_repo/experiments/robot/libero/LIBERO-PRO/libero_ood/ood_task.yaml"
+
+perturbation_mapping:
+  use_environment: env
+  use_swap: swap
+  use_object: object
+  use_language: lan
+  use_task: task
