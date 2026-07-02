@@ -74,6 +74,28 @@ completes the grasp and finishes the task.
 |:---:|:---:|
 | ![Baseline fail](figures/baseline_fail.gif) | ![Ensemble success](figures/ensemble_success.gif) |
 
+## Analysis
+
+**More consistent trajectories.** The ensemble (red) follows a direct,
+repeatable route to the target bowl and then to the plate. The baseline
+(grey) varies more between runs.
+
+![End-effector paths](figures/end_effector_paths.png)
+
+**The feedback tracks the end-effector.** Plotted as a heatmap over five
+timesteps, the feedback concentrates on the manipulation region rather than
+the background. On DINOv2 it follows the end-effector, on SigLIP it stays
+fixed on the gripper. The feedback acts mainly through DINOv2.
+
+![Feedback tracks end-effector](figures/feedback_tracks_endeffector.png)
+
+**The feedback complements DINOv2.** DINOv2's features remain on the static
+scene objects while the feedback concentrates on the end-effector. Red
+regions in the difference map show where the feedback dominates. The
+feedback adds action information that the encoder does not capture.
+
+![Feedback complements DINOv2](figures/feedback_complements_dinov2.png)
+
 ## Repository layout
 
 ```
