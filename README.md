@@ -115,13 +115,28 @@ analysis/                   benchmarks, parameter counts, score aggregation
 
 Linux with CUDA 12.1, one GPU with at least 40 GB memory, Python 3.10.
 
+Two environments were used. `requirements.txt` is for evaluation and
+reproduces the paper's environment (MuJoCo 2.3.7). `requirements-training.txt`
+is for training the mechanisms.
+
+For evaluation.
+
 ```
-python3.10 -m venv venv
-source venv/bin/activate
+python3.10 -m venv venv_eval
+source venv_eval/bin/activate
 pip install --upgrade pip
 pip install torch==2.2.0 torchvision==0.17.0 --index-url https://download.pytorch.org/whl/cu121
 pip install -r requirements.txt
 pip install flash-attn==2.5.5 --no-build-isolation
+```
+
+For training (only if you want to retrain Mechanism 2 or 3).
+
+```
+python3.10 -m venv venv_train
+source venv_train/bin/activate
+pip install --upgrade pip
+pip install -r requirements-training.txt
 ```
 
 If flash-attn install fails, skip it and pass `--use_flash_attention=False`
